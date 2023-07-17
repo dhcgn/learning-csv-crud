@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learning-csv-crud.cli", "learning-csv-crud.cli\learning-csv-crud.cli.csproj", "{6FA9E1B4-5E0A-42A4-A396-AD908455686D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learning-csv-crud.lib", "learning-csv-crud.lib\learning-csv-crud.lib.csproj", "{EA744FF8-0831-4D6D-BCDB-65A854F60B77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learning-csv-crud.test", "learning-csv-crud.test\learning-csv-crud.test.csproj", "{D4CE3E44-D946-4392-AE25-5A350079079E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FA9E1B4-5E0A-42A4-A396-AD908455686D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA9E1B4-5E0A-42A4-A396-AD908455686D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA9E1B4-5E0A-42A4-A396-AD908455686D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA9E1B4-5E0A-42A4-A396-AD908455686D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA744FF8-0831-4D6D-BCDB-65A854F60B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA744FF8-0831-4D6D-BCDB-65A854F60B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA744FF8-0831-4D6D-BCDB-65A854F60B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA744FF8-0831-4D6D-BCDB-65A854F60B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4CE3E44-D946-4392-AE25-5A350079079E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4CE3E44-D946-4392-AE25-5A350079079E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4CE3E44-D946-4392-AE25-5A350079079E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4CE3E44-D946-4392-AE25-5A350079079E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C23C1226-976D-46B6-9F95-C7F106216C66}
+	EndGlobalSection
+EndGlobal

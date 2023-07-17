@@ -1,0 +1,12 @@
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\bin\Debug\net7.0\learning-csv-crud.lib.deps.json
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\bin\Debug\net7.0\learning-csv-crud.lib.dll
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\bin\Debug\net7.0\learning-csv-crud.lib.pdb
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\obj\Debug\net7.0\learning-csv-crud.lib.csproj.AssemblyReference.cache
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\obj\Debug\net7.0\learning-csv-crud.lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\obj\Debug\net7.0\learning-csv-crud.lib.AssemblyInfoInputs.cache
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\obj\Debug\net7.0\learning-csv-crud.lib.AssemblyInfo.cs
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\obj\Debug\net7.0\learning-csv-crud.lib.csproj.CoreCompileInputs.cache
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\obj\Debug\net7.0\learning-csv-crud.lib.dll
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\obj\Debug\net7.0\refint\learning-csv-crud.lib.dll
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\obj\Debug\net7.0\learning-csv-crud.lib.pdb
+C:\dev\GitHub\learning-csv-crud\learning-csv-crud.lib\obj\Debug\net7.0\ref\learning-csv-crud.lib.dll
