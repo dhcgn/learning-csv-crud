@@ -13,7 +13,13 @@ internal class Program
         if (args.Length == 0)
         {
             Console.WriteLine("Bitte geben Sie den Pfad zur CSV-Datei an.");
-            path = Console.ReadLine();
+            var pathFromConsole = Console.ReadLine();
+            if (string.IsNullOrEmpty(pathFromConsole))
+            {
+                Console.WriteLine("Ungültige Eingabe");
+                return;
+            }
+            path = pathFromConsole;
         }
         else
         {
@@ -43,6 +49,11 @@ internal class Program
             var ops = Console.Read();
             Console.WriteLine("Bitte geben Sie ein Jahr ein:");
             var jahr = Console.ReadLine();
+            if (string.IsNullOrEmpty(jahr))
+            {
+                Console.WriteLine("Ungültige Eingabe");
+                continue;
+            }
 
             switch (ops)
             {
@@ -68,13 +79,13 @@ internal class Program
                     break;
                 default: 
                     Console.WriteLine("Ungültige Eingabe");
-                    break;
+                    continue;
             }
 
         }
     }
 
-    private static JahresStatistik Change(JahresStatistik? js)
+    private static JahresStatistik Change(JahresStatistik js)
     {
         Console.WriteLine("Datensatz gefunden: " + js.ToTableRow());
         Console.WriteLine("Welches Spalte möchten Sie verändern?");
@@ -112,7 +123,7 @@ internal class Program
         return js;
     }
 
-    private static JahresStatistik CreateNew(string? jahr)
+    private static JahresStatistik CreateNew(string jahr)
     {
         Console.WriteLine("Bitte geben Sie die Anzahl Rettungswachen ein:");
         var anzahlRettungswachen = Convert.ToInt32(Console.ReadLine());
