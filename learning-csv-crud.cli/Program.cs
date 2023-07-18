@@ -65,7 +65,7 @@ internal class Program
             switch (ops)
             {
                 case 'h':
-                    if (db.Any(x => x.Jahr == jahr))
+                    if (CRUD.Exists(db, jahr))
                     {
                         Console.WriteLine("Datensatz bereits vorhanden");
                         break;
@@ -79,12 +79,12 @@ internal class Program
                     IO.WriteCsvDatabase(path, db);
                     break;
                 case 'a':
-                    var js = db.FirstOrDefault(x => x.Jahr == jahr);
-                    if (js == null)
+                    if (!CRUD.Exists(db, jahr))
                     {
                         Console.WriteLine("Kein Datensatz gefunden");
                         break;
                     }
+                    var js = db.First(x => x.Jahr == jahr);
                     js = Change(js);
                     CRUD.Update(db, js);
                     IO.WriteCsvDatabase(path, db);
