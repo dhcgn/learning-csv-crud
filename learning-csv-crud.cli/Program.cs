@@ -45,8 +45,15 @@ internal class Program
                 System.Console.WriteLine(js.ToTableRow());
             }
 
-            Console.WriteLine("Bitte geben Sie die Aktion ein h_inzufügen, l_öschen, ä_ndern");
-            var ops = Console.Read();
+            Console.WriteLine("Bitte geben Sie die Aktion ein h_inzufügen, l_öschen, a_endern");
+            var operation = Console.ReadLine();
+            if (string.IsNullOrEmpty(operation) || operation.Length != 1)
+            {
+                Console.WriteLine("Ungültige Eingabe: "+ operation);
+                continue;
+            }
+            var ops = operation[0];
+
             Console.WriteLine("Bitte geben Sie ein Jahr ein:");
             var jahr = Console.ReadLine();
             if (string.IsNullOrEmpty(jahr))
@@ -58,6 +65,11 @@ internal class Program
             switch (ops)
             {
                 case 'h':
+                    if (db.Any(x => x.Jahr == jahr))
+                    {
+                        Console.WriteLine("Datensatz bereits vorhanden");
+                        break;
+                    }
                     var jahresStatistik = CreateNew(jahr);
                     db = CRUD.Add(db, jahresStatistik);
                     IO.WriteCsvDatabase(path, db);
@@ -66,7 +78,7 @@ internal class Program
                     db = CRUD.Delete(db, jahr);
                     IO.WriteCsvDatabase(path, db);
                     break;
-                case 'ä':
+                case 'a':
                     var js = db.FirstOrDefault(x => x.Jahr == jahr);
                     if (js == null)
                     {
@@ -78,7 +90,7 @@ internal class Program
                     IO.WriteCsvDatabase(path, db);
                     break;
                 default: 
-                    Console.WriteLine("Ungültige Eingabe");
+                    Console.WriteLine("Ungültige Eingabe: "+ ops);
                     continue;
             }
 
@@ -95,7 +107,7 @@ internal class Program
         Console.WriteLine("4: darunter wegen Infektionskrankheiten");
         Console.WriteLine("5: darunter wegen Frühgeburten");
 
-        var field = Console.Read();
+        var field = Console.ReadLine()?.FirstOrDefault();
         switch (field)
         {
             case '1':
