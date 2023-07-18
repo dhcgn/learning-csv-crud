@@ -52,11 +52,11 @@ internal class Program
                 Console.WriteLine("Ungültige Eingabe: "+ operation);
                 continue;
             }
-            var ops = operation[0];
+            var ops = operation.First();
 
             Console.WriteLine("Bitte geben Sie ein Jahr ein:");
             var jahr = Console.ReadLine();
-            if (string.IsNullOrEmpty(jahr))
+            if (string.IsNullOrEmpty(jahr) || jahr.Length != 4 || !int.TryParse(jahr, out _))
             {
                 Console.WriteLine("Ungültige Eingabe");
                 continue;
