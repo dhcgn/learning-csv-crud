@@ -2,7 +2,7 @@
 
 public static class IO
 {
-    public static (bool, string) IsValidCsvDatabase(string path)
+    public static (bool success, string error) IsValidCsvDatabase(string path)
     {
         if (!File.Exists(path))
         {
