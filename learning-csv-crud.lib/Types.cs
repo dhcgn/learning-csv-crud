@@ -3,7 +3,7 @@ namespace learning_csv_crud.lib;
 public class JahresStatistik
 {
     // Jahr
-    public string Jahr { get; set; }
+    public string Jahr { get; set; } = "0000";
     // Anzahl der Rettungswachen
     public int AnzahlRettungswachen { get; set; }
     // Anzahl der Krankenkraftwagen

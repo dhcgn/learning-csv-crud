@@ -17,7 +17,7 @@ public class StatsDecade
         return groupedByDecade.ToArray();
     }
 
-    public string Jahrzent { get; private set; }
+    public string Jahrzent { get; private set; } = "0000";
     public double DurchschnittRettungswachen { get; private set; }
     public double DurchschnittKrankenkraftwagen { get; private set; }
     public int SummeTransporte { get; private set; }
