@@ -45,6 +45,13 @@ internal class Program
                 System.Console.WriteLine(js.ToTableRow());
             }
 
+            System.Console.WriteLine("Statistik nach Jahrzehnten:");
+            Console.WriteLine(StatsDecade.GetHeaderForTable());
+            foreach (var stats in StatsDecade.Create(db))
+            {
+                Console.WriteLine(stats.ToTableRow());
+            }
+
             Console.WriteLine("Bitte geben Sie die Aktion ein h_inzufügen, l_öschen, a_endern");
             var operation = Console.ReadLine();
             if (String.IsNullOrEmpty(operation) || operation.Length != 1)
