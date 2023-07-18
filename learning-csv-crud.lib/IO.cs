@@ -21,6 +21,11 @@ public static class IO
             return (false, "Invalid header");
         }
 
+        if (lines.Skip(1).Any(line => line.Split(';').Length != 6))
+        {
+            return (false, "Invalid cloumn count");
+        }
+
         return (true, string.Empty);
     }
 
