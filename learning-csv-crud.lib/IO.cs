@@ -23,7 +23,7 @@ public static class IO
 
         if (lines.Skip(1).Any(line => line.Split(';').Length != 6))
         {
-            return (false, "Invalid cloumn count");
+            return (false, "Invalid column count");
         }
 
         return (true, string.Empty);
