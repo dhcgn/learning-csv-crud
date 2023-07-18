@@ -89,23 +89,23 @@ internal class Program
         {
             case '1':
                 Console.WriteLine("Bitte geben Sie die Anzahl Rettungswachen ein:");
-                js.AnzahlRettungswachen = int.Parse(Console.ReadLine());
+                js.AnzahlRettungswachen = Convert.ToInt32(Console.ReadLine());
                 break;
             case '2':
                 Console.WriteLine("Bitte geben Sie die Anzahl Krankenkraftwagen ein:");
-                js.AnzahlKrankenkraftwagen = int.Parse(Console.ReadLine());
+                js.AnzahlKrankenkraftwagen = Convert.ToInt32(Console.ReadLine());
                 break;
             case '3':
                 Console.WriteLine("Bitte geben Sie die Anzahl Transporte insgesamt ein:");
-                js.TransporteInsgesamt = int.Parse(Console.ReadLine());
+                js.TransporteInsgesamt = Convert.ToInt32(Console.ReadLine());
                 break;
             case '4':
                 Console.WriteLine("Bitte geben Sie die Anzahl Transporte Infektionskrankheiten ein:");
-                js.TransporteInfektionskrankheiten = int.Parse(Console.ReadLine());
+                js.TransporteInfektionskrankheiten = Convert.ToInt32(Console.ReadLine());
                 break;
             case '5':
                 Console.WriteLine("Bitte geben Sie die Anzahl Transporte Frühgeburten ein:");
-                js.TransporteFrühgeburten = int.Parse(Console.ReadLine());
+                js.TransporteFrühgeburten = Convert.ToInt32(Console.ReadLine());
                 break;
             default: break;
         }
@@ -115,15 +115,15 @@ internal class Program
     private static JahresStatistik CreateNew(string? jahr)
     {
         Console.WriteLine("Bitte geben Sie die Anzahl Rettungswachen ein:");
-        var anzahlRettungswachen = int.Parse(Console.ReadLine());
+        var anzahlRettungswachen = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Bitte geben Sie die Anzahl Krankenkraftwagen ein:");
-        var anzahlKrankenkraftwagen = int.Parse(Console.ReadLine());
+        var anzahlKrankenkraftwagen = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Bitte geben Sie die Anzahl Transporte insgesamt ein:");
-        var transportInsgesamt = int.Parse(Console.ReadLine());
+        var transportInsgesamt = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Bitte geben Sie die Anzahl Transporte Infektionskrankheiten ein:");
-        var transportInfektionskrankheiten = int.Parse(Console.ReadLine());
+        var transportInfektionskrankheiten = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Bitte geben Sie die Anzahl Transporte Frühgeburten ein:");
-        var transportFrühgeburten = int.Parse(Console.ReadLine());
+        var transportFrühgeburten = Convert.ToInt32(Console.ReadLine());
         var jahresStatistik = new JahresStatistik
         {
             Jahr = jahr,
