@@ -37,11 +37,11 @@ public static class IO
             var jahresStatistik = new JahresStatistik
             {
                 Jahr = values[0].Replace("\"", string.Empty),
-                AnzahlRettungswachen = int.Parse(values[1]),
-                AnzahlKrankenkraftwagen = int.Parse(values[2]),
-                TransporteInsgesamt = int.Parse(values[3]),
-                TransporteInfektionskrankheiten = int.Parse(values[4]),
-                TransporteFrühgeburten = int.Parse(values[5])
+                AnzahlRettungswachen = Convert.ToInt32(values[1]),
+                AnzahlKrankenkraftwagen = Convert.ToInt32(values[2]),
+                TransporteInsgesamt = Convert.ToInt32(values[3]),
+                TransporteInfektionskrankheiten = Convert.ToInt32(values[4]),
+                TransporteFrühgeburten = Convert.ToInt32(values[5])
             };
             return jahresStatistik;
         }).OrderBy(js => js.Jahr).ToArray();
