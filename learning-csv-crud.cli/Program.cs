@@ -14,7 +14,7 @@ internal class Program
         {
             Console.WriteLine("Bitte geben Sie den Pfad zur CSV-Datei an.");
             var pathFromConsole = Console.ReadLine();
-            if (string.IsNullOrEmpty(pathFromConsole))
+            if (String.IsNullOrEmpty(pathFromConsole))
             {
                 Console.WriteLine("Ungültige Eingabe");
                 return;
@@ -47,16 +47,16 @@ internal class Program
 
             Console.WriteLine("Bitte geben Sie die Aktion ein h_inzufügen, l_öschen, a_endern");
             var operation = Console.ReadLine();
-            if (string.IsNullOrEmpty(operation) || operation.Length != 1)
+            if (String.IsNullOrEmpty(operation) || operation.Length != 1)
             {
-                Console.WriteLine("Ungültige Eingabe: "+ operation);
+                Console.WriteLine("Ungültige Eingabe: " + operation);
                 continue;
             }
             var ops = operation.First();
 
             Console.WriteLine("Bitte geben Sie ein Jahr ein:");
             var jahr = Console.ReadLine();
-            if (string.IsNullOrEmpty(jahr) || jahr.Length != 4 || !int.TryParse(jahr, out _))
+            if (String.IsNullOrEmpty(jahr) || jahr.Length != 4 || !int.TryParse(jahr, out _))
             {
                 Console.WriteLine("Ungültige Eingabe");
                 continue;
@@ -89,11 +89,10 @@ internal class Program
                     CRUD.Update(db, js);
                     IO.WriteCsvDatabase(path, db);
                     break;
-                default: 
-                    Console.WriteLine("Ungültige Eingabe: "+ ops);
+                default:
+                    Console.WriteLine("Ungültige Eingabe: " + ops);
                     continue;
             }
-
         }
     }
 
