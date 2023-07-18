@@ -44,7 +44,7 @@ public static class IO
                 TransporteFrühgeburten = int.Parse(values[5])
             };
             return jahresStatistik;
-        }).ToArray();
+        }).OrderBy(js => js.Jahr).ToArray();
 
         return jahresStatistiken;
     }

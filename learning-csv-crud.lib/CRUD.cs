@@ -1,3 +1,5 @@
+using System.Text.Json.Nodes;
+
 namespace learning_csv_crud.lib;
 
 public static class CRUD
@@ -6,13 +8,13 @@ public static class CRUD
     {
         var jahresStatistikenList = jahresStatistiken.ToList();
         jahresStatistikenList.Add(jahresStatistik);
-        return jahresStatistikenList.ToArray();
+        return jahresStatistikenList.OrderBy(js => js.Jahr).ToArray();
     }
 
     public static JahresStatistik[] Update(JahresStatistik[] jahresStatistiken, JahresStatistik jahresStatistik)
     {
         var jahresStatistikenList = jahresStatistiken.ToList();
-        var index = jahresStatistikenList.FindIndex(x => x.Jahr == jahresStatistik.Jahr);
+        var index = jahresStatistikenList.FindIndex(js => js.Jahr == jahresStatistik.Jahr);
         jahresStatistikenList[index] = jahresStatistik;
         return jahresStatistikenList.ToArray();
     }
@@ -20,7 +22,7 @@ public static class CRUD
     public static JahresStatistik[] Delete(JahresStatistik[] jahresStatistiken, string jahr)
     {
         var jahresStatistikenList = jahresStatistiken.ToList();
-        var index = jahresStatistikenList.FindIndex(x => x.Jahr == jahr);
+        var index = jahresStatistikenList.FindIndex(js => js.Jahr == jahr);
         jahresStatistikenList.RemoveAt(index);
         return jahresStatistikenList.ToArray();
     } 
