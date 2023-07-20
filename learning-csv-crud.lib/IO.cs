@@ -2,8 +2,13 @@
 
 public static class IO
 {
-    public static (bool success, string error) IsValidCsvDatabase(string path)
+    public static (bool success, string error) IsValidCsvDatabase(string? path)
     {
+        if(String.IsNullOrEmpty(path))
+        {
+            return (false, "Path is null or empty");
+        }
+
         if (!File.Exists(path))
         {
             return (false, "File does not exist");
