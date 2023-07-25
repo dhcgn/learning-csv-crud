@@ -31,6 +31,12 @@ public static class IO
             return (false, "Invalid column count");
         }
 
+        var regex = new System.Text.RegularExpressions.Regex(@"^""[0-9]{4}"";[0-9]{1,};[0-9]{1,};[0-9]{1,};[0-9]{1,};[0-9]{1,}$");
+        if (lines.Skip(1).Any(line => !regex.IsMatch(line)))
+        {
+            return (false, "Invalid line (regex)");
+        }
+
         return (true, string.Empty);
     }
 

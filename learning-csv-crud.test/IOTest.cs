@@ -44,8 +44,8 @@ public class IO_Test : IDisposable
         var lines = new List<string>
         {
             JahresStatistik.GetHeader(),
-            "2019;1;2;3;4;5",
-            "2020;1;2;3;4;5"
+            "\"2019\";1;2;3;4;5",
+            "\"2020\";1;2;3;4;5"
         };
         File.WriteAllLines(file, lines);
 
@@ -123,6 +123,9 @@ public class IO_Test : IDisposable
         #endregion
         
         #region Assert
+
+        var (success, error) = IO.IsValidCsvDatabase(file);
+        success.Should().BeTrue(error);
 
         db = IO.ReadCsvDatabase(file);
         db.Should().NotBeNull();
