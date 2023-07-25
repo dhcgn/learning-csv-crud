@@ -73,7 +73,7 @@ public static class IO
         };
         foreach (var jahresStatistik in jahresStatistiken)
         {
-            var line = $"{jahresStatistik.Jahr};{jahresStatistik.AnzahlRettungswachen};{jahresStatistik.AnzahlKrankenkraftwagen};{jahresStatistik.TransporteInsgesamt};{jahresStatistik.TransporteInfektionskrankheiten};{jahresStatistik.TransporteFrühgeburten}";
+            var line = $"\"{jahresStatistik.Jahr}\";{jahresStatistik.AnzahlRettungswachen};{jahresStatistik.AnzahlKrankenkraftwagen};{jahresStatistik.TransporteInsgesamt};{jahresStatistik.TransporteInfektionskrankheiten};{jahresStatistik.TransporteFrühgeburten}";
             lines.Add(line);
         }
         File.WriteAllLines(path, lines);
